@@ -11,6 +11,8 @@ Practice industry-standard tools and frameworks
 Maintain a clean, reproducible codebase using Git & Maven
 
 📂 Repository Structure
+
+```
 AdvanceJava/
 │
 ├── Assessments/          # Weekly assessments & evaluation tasks
@@ -24,3 +26,4 @@ AdvanceJava/
 │   └── ...
 │
 └── README.md
+```
