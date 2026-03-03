@@ -1,16 +1,41 @@
 # Maven
 target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
 
-# Eclipse
+# Logs
+*.log
+logs/
+
+# Spring Boot
+application-local.properties
+application-local.yml
+application-dev.properties
+application-dev.yml
+
+# IDE - Eclipse
 .project
 .classpath
 .settings/
 
-# IntelliJ / VS Code
+# IDE - IntelliJ
 .idea/
-.vscode/
 *.iml
 
-# OS
+# VS Code
+.vscode/
+
+# OS Files
 .DS_Store
 Thumbs.db
+
+# Compiled files
+*.class
+
+# Test output
+surefire-reports/
