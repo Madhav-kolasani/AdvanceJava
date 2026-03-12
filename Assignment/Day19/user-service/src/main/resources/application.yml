@@ -1,0 +1,20 @@
+server:
+  port: 7708
+
+spring:
+  application:
+    name: user-service
+
+  config:
+    import: "configserver:http://localhost:7777"
+
+  cloud:
+    config:
+      fail-fast: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
