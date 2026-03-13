@@ -1,0 +1,17 @@
+server:
+  port: 7777
+
+spring:
+  application:
+    name: springconfigserver
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Madhav-kolasani/microservices-practice.git
+          clone-on-start: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
