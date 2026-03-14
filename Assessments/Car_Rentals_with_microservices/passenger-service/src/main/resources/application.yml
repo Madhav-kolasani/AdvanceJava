@@ -1,0 +1,22 @@
+#server:
+#  port: 6607
+#
+#spring:
+#  application:
+#    name: passenger-service
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:6610/eureka
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+spring:
+  application:
+    name: passenger-service
+  config:
+    import: "configserver:http://localhost:6609"

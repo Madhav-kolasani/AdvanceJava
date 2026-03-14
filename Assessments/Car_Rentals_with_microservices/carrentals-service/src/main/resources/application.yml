@@ -1,0 +1,22 @@
+#server:
+#  port: 6608
+#
+#spring:
+#  application:
+#    name: carrentals-service
+#
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:6610/eureka
+#
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
+spring:
+  application:
+    name: carrentals-service
+  config:
+    import: "configserver:http://localhost:6609"
