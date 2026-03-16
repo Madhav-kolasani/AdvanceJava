@@ -1,0 +1,36 @@
+server:
+  port: 6606
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: passenger-service-route
+              uri: lb://passenger-service
+              predicates:
+                - Path=/passengerdetails,/passengerdetails/**
+
+            - id: carrentals-service-route
+              uri: lb://carrentals-service
+              predicates:
+                - Path=/rentalcardetails,/rentalcardetails/**
+
+            - id: booking-details-route
+              uri: lb://carrentals-service
+              predicates:
+                - Path=/bookingdetails,/bookingdetails/**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6610/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
